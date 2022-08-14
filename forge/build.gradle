@@ -17,10 +17,10 @@ configurations {
 
 dependencies {
     forge "net.minecraftforge:forge:${rootProject.forge_version}"
-    //modApi "io.github.moremcmeta:moremcmeta:${rootProject.moremcmeta_version}"
+    modImplementation "io.github.moremcmeta:moremcmeta-forge:${rootProject.moremcmeta_version}"
 
     common(project(path: ":common", configuration: "namedElements")) { transitive false }
-    shadowCommon(project(path: ":common", configuration: "transformProductionForge")) { transitive = false }
+    shadowCommon(project(path: ":common", configuration: "transformProductionForge")) { transitive false }
 }
 
 processResources {
