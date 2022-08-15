@@ -27,7 +27,10 @@ processResources {
     inputs.property "version", project.version
 
     filesMatching("META-INF/mods.toml") {
-        expand "version": project.version
+        expand "modVersion": project.version,
+                "minecraftVersion": project.minecraft_version,
+                "minMoreMcmetaVersion": project.moremcmeta_min_version,
+                "loaderVersion": project.forge_version.split('-')[1].split('\\.')[0]
     }
 }
 

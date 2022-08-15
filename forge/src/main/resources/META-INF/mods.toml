@@ -1,11 +1,11 @@
 modLoader = "javafml"
-loaderVersion = "[41,)"
+loaderVersion = "[${loaderVersion},)"
 #issueTrackerURL = ""
 license = "Insert License Here"
 
 [[mods]]
 modId = "myplugin"
-version = "${version}"
+version = "${modVersion}"
 displayName = "Example Mod"
 authors = "AUTHOR_NAME"
 description = '''
@@ -16,20 +16,20 @@ This is an example description! Tell everyone what your mod is about!
 [[dependencies.myplugin]]
 modId = "moremcmeta"
 mandatory = true
-versionRange = ","
+versionRange = "[${minMoreMcmetaVersion},)"
 ordering = "NONE"
 side = "CLIENT"
 
 [[dependencies.myplugin]]
 modId = "forge"
 mandatory = true
-versionRange = "[41,)"
+versionRange = "[${loaderVersion},)"
 ordering = "NONE"
 side = "BOTH"
 
 [[dependencies.myplugin]]
 modId = "minecraft"
 mandatory = true
-versionRange = "[1.19,)"
+versionRange = "[${minecraftVersion},)"
 ordering = "NONE"
 side = "BOTH"

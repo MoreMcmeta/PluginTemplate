@@ -28,7 +28,14 @@ processResources {
     inputs.property "version", project.version
 
     filesMatching("fabric.mod.json") {
-        expand "version": project.version
+        def minMoreMcmetaVersion = project.moremcmeta_min_version
+        if (minMoreMcmetaVersion != "*") {
+            minMoreMcmetaVersion = ">=${minMoreMcmetaVersion}"
+        }
+
+        expand "modVersion": project.version,
+                "minecraftVersion": project.minecraft_version,
+                "minMoreMcmetaVersion": minMoreMcmetaVersion
     }
 }
 

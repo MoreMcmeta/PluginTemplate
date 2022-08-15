@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "myplugin",
-  "version": "${version}",
+  "version": "${modVersion}",
   "name": "Example Mod",
   "description": "This is an example description! Tell everyone what your mod is about!",
   "authors": [
@@ -21,7 +21,7 @@
   },
   "depends": {
     "fabric": "*",
-    "minecraft": ">=1.19",
-    "moremcmeta": "*"
+    "minecraft": ">=${minecraftVersion}",
+    "moremcmeta": "${minMoreMcmetaVersion}"
   }
 }
