@@ -41,8 +41,8 @@ allprojects {
         maven {
             url "https://maven.pkg.github.com/soir20/MoreMcmeta/"
             credentials {
-                username project.moremcmeta_maven_user
-                password project.moremcmeta_maven_pass
+                username System.getenv("MOREMCMETA_MAVEN_USER") ?: project.moremcmeta_maven_user
+                password System.getenv("MOREMCMETA_MAVEN_PASS") ?: project.moremcmeta_maven_pass
             }
         }
     }
