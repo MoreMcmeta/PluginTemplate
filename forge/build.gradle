@@ -19,7 +19,6 @@ configurations {
 
 dependencies {
     forge "net.minecraftforge:forge:${project.forge_version}"
-    modImplementation "io.github.moremcmeta:moremcmeta-forge:${project.moremcmeta_version}"
 
     common(project(path: ":common", configuration: "namedElements")) { transitive false }
     shadowCommon(project(path: ":common", configuration: "transformProductionForge")) { transitive false }
